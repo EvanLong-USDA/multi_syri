@@ -12,7 +12,7 @@ Before running the pipeline
 
 -Change absolute paths in Genome_list.txt \n
 ```bash
-unzip testdata.zip -d testdata/
+for x in `ls testdata/*`; do gunzip $x; done
 conda env create -f minimap2.yml
 conda env create -f syri.yml
 ```

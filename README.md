@@ -36,10 +36,15 @@ bash syri_master_step2.sh output1 absolute/path/Chromosome_list.txt
 ```
 
 Requirements
+
 SyRI 
+
 minimap2
+
 seqtk
+
 samtools
+
 SLURM (if using unmodified scripts)
 
 

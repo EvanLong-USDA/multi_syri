@@ -4,7 +4,10 @@ A pipeline to streamline the analysis of multiple genome assemblies through SyRI
 ## Usage
 
 ### Step 1: Unzip test data
-Before running the pipeline, make conda environments and unzip the test dataset if needed:
+Before running the pipeline, 
+-make conda environments
+-unzip the test dataset
+-Change absolute paths in Genome_list.txt
 ```bash
 unzip testdata.zip -d testdata/
 conda env create -f minimap2.yml

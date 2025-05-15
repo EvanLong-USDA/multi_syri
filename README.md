@@ -10,7 +10,8 @@ Before running the pipeline
 
 -unzip the test dataset
 
--Change absolute paths in Genome_list.txt \n
+-Change absolute paths in Genome_list.txt 
+
 ```bash
 for x in `ls testdata/*`; do gunzip $x; done
 conda env create -f minimap2.yml
@@ -24,6 +25,9 @@ bash syri_master_step1.sh Genome_list.txt output1 absolute/path/Chromosome_list.
 ```
 
 Note: The syri_pairwise.sh script is designed to be submitted through SLURM using sbatch within syri_master_step1.sh. If you are not using a SLURM environment, you will need to modify the script accordingly.
+
+Wait until all minimap/syri commands are completed before running th next step
+
 
 Step 3: Run the second script
 Execute the syri_master_step2.sh script with:

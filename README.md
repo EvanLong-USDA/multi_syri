@@ -4,9 +4,12 @@ A pipeline to streamline the analysis of multiple genome assemblies through SyRI
 ## Usage
 
 ### Step 1: Unzip test data
-Before running the pipeline, \n
--make conda environments \n
--unzip the test dataset \n
+Before running the pipeline
+
+-make conda environments
+
+-unzip the test dataset
+
 -Change absolute paths in Genome_list.txt \n
 ```bash
 unzip testdata.zip -d testdata/

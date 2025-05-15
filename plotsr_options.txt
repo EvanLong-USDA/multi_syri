@@ -1,0 +1,5 @@
+       --genomes genomes.txt \
+       --cfg base.cfg \
+       --chr NUMBER \
+       -o NUMBER.png \
+       -S 0.5 -W 14 -H 6 -f 8

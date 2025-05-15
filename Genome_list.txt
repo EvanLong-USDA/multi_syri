@@ -1,0 +1,3 @@
+absolutePath/to/Ref.fa
+absolutePath/to/Genome.hap1.fa
+absolutePath/to/Genome.hap2.fa

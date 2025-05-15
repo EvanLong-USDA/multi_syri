@@ -1,0 +1,4 @@
+##ft    =   File type (fa:fasta/cl:chromosome_length, default = fa. cl files are fasters)
+##lc    =       line colour
+##lw    =       line width
+#file   name    tags

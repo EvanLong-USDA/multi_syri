@@ -45,5 +45,5 @@ minimap2 -ax asm5 --eqx -t $threads Ref.fa Query.fa  > $Genome_name'vs'$Referenc
 conda activate syri
 syri -c $Genome_name"vs"$Reference".sam" -r Ref.fa -q Query.fa -k -F S --prefix ${Genome_name}_vs_$Reference"."
 perl -ne 'chomp;if( />(.*)/){$head = $1; $i=0; next};@a=split("",$_); foreach(@a){$i++; if($_ eq "N" && $s ==0 ){$z=$i-1; print "$head\t$z"; $s =1}elsif($s==1 && $_ ne "N"){$j=$i-1;print "\t$j\n";$s=0}}' Query.fa | awk -v OFS="\t" -v awkvar=$Genome_name '{print $1,$2,$3,awkvar,"mt:v;mc:black;ms:1;tp:0.02;ts:8;tf:Droid Sans;tc:black"}' > ${Genome_name}_breakpoints.bed
-perl -ne 'chomp;if( />(.*)/){$head = $1; $i=0; next};@a=split("",$_); foreach(@a){$i++; if($_ eq "N" && $s ==0 ){$z=$i-1; print "$head\t$z"; $s =1}elsif($s==1 && $_ ne "N"){$j=$i-1;print "\t$j\n";$s=0}}' Ref.fa | awk -v OFS="\t" -v awkvar=$Genome_name '{print $1,$2,$3,awkvar,"mt:v;mc:black;ms:1;tp:0.02;ts:8;tf:Droid Sans;tc:black"}' > ${Reference}_breakpoints.bed
+perl -ne 'chomp;if( />(.*)/){$head = $1; $i=0; next};@a=split("",$_); foreach(@a){$i++; if($_ eq "N" && $s ==0 ){$z=$i-1; print "$head\t$z"; $s =1}elsif($s==1 && $_ ne "N"){$j=$i-1;print "\t$j\n";$s=0}}' Ref.fa | awk -v OFS="\t" -v awkvar=$Reference '{print $1,$2,$3,awkvar,"mt:v;mc:black;ms:1;tp:0.02;ts:8;tf:Droid Sans;tc:black"}' > ${Reference}_breakpoints.bed
 

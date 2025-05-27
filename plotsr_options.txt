@@ -1,6 +1,6 @@
        --genomes genomes.txt \
        --cfg base.cfg \
        --chr NUMBER \
-       --markers markes.bed \
+       --markers markers.bed \
        -o NUMBER.png \
        -S 0.5 -W 14 -H 6 -f 8
